@@ -1,0 +1,96 @@
+@import "fonts";
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+
+:root{
+	font-size: 10px;
+}
+body{
+	overflow-x: hidden;
+}
+input[type=submit],
+textarea,
+input[type=text],
+input[type=tel],
+select{
+	-webkit-appearance: none;
+   	-moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: none;
+    font-size: inherit;
+}
+textarea:focus,
+input:focus,
+select:focus{
+	font-size: inherit;
+}
+select::-ms-expand{
+    display: none;
+}
+textarea{
+	resize:none;
+	overflow: auto;
+}
+.wrapper{
+	min-width: 320px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	font-family: $font1;	
+	overflow-x: hidden;
+	color: #000;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+h1, 
+h2,
+h3{
+	font-weight: normal;
+}
+.container{
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 100%;
+}
+.title-font{
+	font-family: $font2;
+	span{
+		font: 2.5rem/4.5rem $font-bold;
+		text-transform: uppercase;
+		display: block;
+	}
+}
+.contact{
+	p{
+	display: inline-block;
+		a{
+			color: #297dcf;
+			font-weight: 600;
+			white-space: nowrap;
+		}
+		&:after{
+			content: "|";
+			color: #dde1f1;
+			padding: 0 1.5rem;
+		}
+	}
+	a{
+		color: #3a88d4;
+	}
+}
+@import "header";
+@import "prefer";
+@import "description";
+@import "testimonials";
+@import "brands";
+@import "form-block";
+@import "map-block";
+@import "footer"

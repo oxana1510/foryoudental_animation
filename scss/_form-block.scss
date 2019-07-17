@@ -1,0 +1,302 @@
+.form-block{
+	background: #1283b3;
+	.container{
+		max-width: 102.5rem;
+		padding: 10rem 3rem;
+	}
+	.title-font{
+		color: #fff;
+		font-size: 4.5rem;
+		line-height: 5rem;
+		padding-bottom: 5.5rem;
+		text-align: center;
+	}
+	form{
+		max-width: 96rem;
+		width: 100%;
+		margin: auto;
+		border-radius: 4.5rem;
+		border: 0.1rem solid #d4ddee;
+		background: #fff;
+		padding: 1rem 3rem;
+		overflow-x: hidden;
+		img{
+			vertical-align: middle;
+			margin-right: 0.8rem;
+		}
+		.form__item{
+			border-bottom: 0.1rem  solid #d8e0f0;
+			padding: 2rem 0;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+		}
+		.column{
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
+	}
+	.form-text{
+		font: 1.5rem/3rem $font-bold;
+	}
+	.choice{
+		display: inline-block;
+		max-width: 23.6rem;
+		width: 100%;
+		img{
+			margin-right: 2rem;
+		}
+	}
+	.type{
+		padding-bottom: 1rem;
+	}
+	select,
+	input[type=text],
+	input[type=tel],
+	input[type=date]{
+		max-width: 23.6rem;
+		width: 100%;
+		border: 0.1rem solid #7392b8;
+		border-radius: 2.8rem;
+		background-color: transparent;
+		padding: 1.8rem;
+		font: 1.5rem $font1;
+		color: #868686;
+		margin: 0 0.4rem;
+		cursor: default;
+	}
+	input[type=text].input-width{
+		max-width: 100%;
+	}
+	input[type=text].input-widthshort,
+	input[type=date].input-widthshort,
+	.input-widthshort{
+		max-width: 16.1rem;
+	}
+	select{
+		background-image: url(../img/icon-bottom.svg);
+		background-repeat: no-repeat;
+		background-position: 92%;
+	}
+	.calendar{
+		background-image: url(../img/calendar.svg);
+		background-repeat: no-repeat;
+		background-position: 92%;
+	}
+	textarea{
+		width: 100%;
+		border-radius: 2.7rem;
+		border: 0.1rem solid #7392b8;
+		height: 10.5rem;
+		padding: 2rem;
+	}
+	input[type="submit"]{
+		display: block;
+		max-width: 29.4rem;
+		padding: 1.5rem 0;
+		text-align: center;
+		width: 100%;
+		text-shadow: 0 0 0.4rem rgba(255, 138, 0, 0.75);
+		color: #fff;
+		font: 1.7rem $font-bold;
+		text-transform: uppercase;
+		border-radius: 2.6rem;
+		background: #ffae00;
+		cursor: pointer;
+		margin: 3rem auto 2rem;
+		border: 0.2rem solid #ffae00;
+		&:hover{
+			color: #ffae00;
+			background: #fff;
+			text-shadow: none;
+		}
+	}
+	input[type=text]:not(.calendar),
+	input[type=tel]{
+		&:focus::-webkit-input-placeholder {
+		  color: transparent
+		}
+		 
+		&:focus::-moz-placeholder {
+		  color: transparent
+		}
+		 
+		&:focus:-moz-placeholder {
+		  color: transparent
+		}
+		&:focus:-ms-input-placeholder {
+		  color: transparent
+		}
+	}
+	input[type=text],
+	input[type=tel],
+	input[type=date]{
+		&::-webkit-input-placeholder {
+		  color: #868686;
+		  opacity: 1;
+		}
+		 
+		&::-moz-placeholder {
+		  color: #868686;
+		  opacity: 1;
+		}
+		 
+		&:-moz-placeholder {
+		  color: #868686;
+		  opacity: 1;
+		}
+		&:-ms-input-placeholder {
+		   color: #868686;
+		   opacity: 1;
+		}
+	}
+	label{
+		font-size: 1.5rem;
+		max-width: 20rem;
+		width: 100%;
+		cursor: pointer;
+		span{
+			position: relative;
+			display: inline-block;
+			width: 2.4rem;
+			height: 2.4rem;
+			margin-right: 1.3rem;
+    		border: 0.1rem solid #7392b8;
+    		border-radius: 50%;
+    		vertical-align: middle;
+    		&:before{
+				content: "";
+				position: absolute;
+				width: 1.2rem;
+				height: 1.2rem;
+				background: #ffae00;
+				border-radius: 50%;
+				top: 0.5rem;
+    			left: 0.5rem;
+    			display: none;
+			}
+		}
+	}
+	label input[type=radio]{
+		display: none;
+		width: 2.4rem;
+		height: 2.4rem;
+    	border: 0.1rem solid #7392b8;
+		background-color: #fff;
+		span:before{
+			display: none;
+		}
+		&:checked + span:before{
+			display: block;
+		}
+	}
+	.insurance-width{
+		max-width: 24rem;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 855px){
+.form-block{
+	form{
+		.form__item{
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+			input,
+			select,
+			label{
+				-webkit-box-flex: 1;
+				    -ms-flex: 1 34%;
+				        flex: 1 34%;
+			}
+		}
+		.choice{
+			margin: 0 0.4rem;
+			-webkit-box-flex: 1;
+			    -ms-flex: 1 34%;
+			        flex: 1 34%;
+		}
+	}
+	.choice,
+	select,
+	input[type="text"],
+	input[type="tel"],
+	input[type="date"],
+	input[type="text"].input-widthshort,
+	input[type="date"].input-widthshort,
+	.input-widthshort{
+		max-width: 35rem;
+	}
+	input[type="text"].input-width{
+		max-width: 71rem;
+	}
+	select,
+	input,
+	input[type="text"],
+	input[type="tel"],
+	input[type="date"],
+	.choice{
+		margin-bottom: 2rem;
+	}
+	.insurance-width{
+		max-width: 100%;
+		padding-bottom: 2rem;
+		text-align: center;
+	}
+}
+}
+
+@media screen and (max-width: 650px){
+.form-block{
+	.container{
+		padding: 5rem 3rem;
+	}
+	.title-font{
+		padding-bottom: 5rem;
+	}
+}
+}
+@media screen and (max-width: 576px){
+.form-block{
+	form{
+		.form__item{
+			input,
+			select,
+			label{
+				-webkit-box-flex: 1;
+				    -ms-flex: 1 100%;
+				        flex: 1 100%;
+			}
+			.choice{
+				-webkit-box-flex: 1;
+				    -ms-flex: 1 100%;
+				        flex: 1 100%;
+				padding-bottom: 2rem;
+			}
+
+		}
+	}
+	label:nth-of-type(1){
+		padding-bottom: 1rem;
+	}
+	.choice,
+	select,
+	input[type="text"],
+	input[type="tel"],
+	input[type="date"],
+	input[type="text"].input-widthshort,
+	input[type="date"].input-widthshort,
+	.input-widthshort,
+	input[type="text"].input-width{
+		max-width: 100%;
+	}
+}
+}

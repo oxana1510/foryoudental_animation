@@ -1,0 +1,140 @@
+.testimonials{
+	position: relative;
+	background: url(../img/testimonials-bg.jpg) center no-repeat;
+	background-size: cover;
+	&:before{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -14rem;
+		-webkit-transform: rotate(3deg);
+		    -ms-transform: rotate(3deg);
+		        transform: rotate(3deg); 
+		-webkit-transform-origin: 0 0; 
+		    -ms-transform-origin: 0 0; 
+		        transform-origin: 0 0;
+		content: "";
+		width: 102vw;
+		height: 20rem;
+		background: #fff;
+	}
+	.container{
+		position: relative;
+		padding: 4rem 6.5rem 20rem;
+	}
+	.title-font{
+		font-size: 4.5rem;
+		text-align: center;
+		padding-bottom: 7rem;
+	}
+	.slider{
+		&__item{
+			position: relative;
+			left: 5rem;
+			max-width: 72.6rem;
+			width: 100%;
+			border-radius: 4.5rem;
+			border: 0.1rem solid #d4ddee;
+			background: rgba(255, 255, 255, 0.9);
+			margin: auto;
+			padding: 8.5rem 6.4rem 4.9rem 12rem;
+		}
+		&__img{
+			position: absolute;
+			left: -8rem;
+			top: calc(50% - 7.95rem);
+			width: 15.9rem;
+			height: 15.9rem;
+			border-radius: 50%;
+			border: 0.1rem solid #d4ddee;
+			background: #fff;
+			.wrap-img{
+				border-radius: 50%;
+				margin: 1.5rem auto auto;
+				width: 12.9rem;
+				height: 12.9rem;
+				background: #dfe7f6;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
+			}
+		}
+		p{
+			color: #575757;
+			font-size: 1.7rem;
+			line-height: 3rem;
+			em{
+				display: block;
+				color: #5c82d4;
+				padding-top: 3.2rem;
+			}
+			&:before,
+			&:after{
+				position: absolute;
+				width: 6.1rem;
+				height: 4.1rem;
+			}
+			&:before{
+				content: url(../img/quote-left.png);
+				left: 12rem;
+				top: 3.5rem;
+			}
+			&:after{
+				content: url(../img/quote-right.png);
+				right: 7rem;
+				bottom: 6rem;
+			}
+		}
+}
+}
+
+@media screen and(max-width: 992px){
+.testimonials{
+	.slider__item{
+		max-width: 46.6rem;
+	}
+	.container{
+		padding: 4rem 3rem 20rem;
+	}
+} 
+}
+
+
+@media screen and(max-width: 650px){
+.testimonials{
+	.container{
+		padding-top: 0;
+		top: -7rem;
+		padding-bottom: 5rem;
+	}
+	.slider{
+		&__item{
+		padding: 13rem 3rem 8rem;
+		left: 0;
+		margin-top: 8rem;
+		}
+		&__img{
+			top: -7.95rem;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		p{
+			&:before{
+				top: 7.5rem;
+				left: 3rem;
+			}
+			&:after{
+				bottom: 7rem;
+				right: 3rem;
+			}
+		}
+	}
+} 
+}
